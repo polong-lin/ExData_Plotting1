@@ -1,3 +1,6 @@
+##Working directory:
+These R scripts assume that the working directory is in the same location as the data, "household_power_consumption.txt".
+
 ## Introduction
 
 This assignment uses data from

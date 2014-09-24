@@ -1,5 +1,4 @@
-##Working directory:
-These R scripts assume that the working directory is in the same location as the data, "household_power_consumption.txt".
+# Plotting Electric Power Consumption Data using base, ggplot2, and lattice packages
 
 ## Introduction
 

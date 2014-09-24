@@ -101,6 +101,8 @@ plot(df$Datetime, df$Global_active_power, type = "l",
 # dev.off()
 ```
 
+![plot2](plot2.png) 
+
 ## Plot3: Electrical consumption by type of appliance
 
 Below we can see how the electrical power usage changed across time, depending on the type of appliace. 
@@ -149,6 +151,8 @@ legend("topright", lty = 1, cex = 0.70, y.intersp = 0.9, col = c("black", "red",
 # dev.copy(png, file = "plot3.png", width = 480, height = 480)
 # dev.off()
 ```
+
+![plot3](plot3.png) 
 
 ```{r}
 ###########
@@ -212,3 +216,4 @@ plot(df$Datetime, df$Global_reactive_power, type = "l",
 # dev.off()
 ```
 
+![plot4](plot4.png) 

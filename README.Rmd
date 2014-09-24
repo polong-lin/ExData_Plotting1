@@ -1,22 +1,31 @@
-# Plotting Data: Individual household electric power consumption
+## **Plotting Data:** Individual household electric power consumption
 
 This dataset can be found on at the UC Irvine Machine Learning Repository (http://archive.ics.uci.edu/ml/).
-It is the "Individual household electric power consumption", which is a 20Mb file containing over 2 million rows and 9 columns on the usage of electrical power in a single household. Measurements were taken every minute for almost four years.
 
-Below are some descriptions of the data variables, taken from:
+It is the "Individual household electric power consumption" dataset, which is a 20Mb file containing over 2 million rows and 9 columns on the usage of electrical power in a single household. Measurements were taken every minute for almost four years.
+
+**Below are some descriptions of the data variables, taken from:**
 https://archive.ics.uci.edu/ml/datasets/Individual+household+electric+power+consumption
 
-Attribute Information:
+**Attribute Information:**
 
-1.date: Date in format dd/mm/yyyy 
-2.time: time in format hh:mm:ss 
-3.global_active_power: household global minute-averaged active power (in kilowatt) 
-4.global_reactive_power: household global minute-averaged reactive power (in kilowatt) 
-5.voltage: minute-averaged voltage (in volt) 
-6.global_intensity: household global minute-averaged current intensity (in ampere) 
-7.sub_metering_1: energy sub-metering No. 1 (in watt-hour of active energy). It corresponds to the kitchen, containing mainly a dishwasher, an oven and a microwave (hot plates are not electric but gas powered). 
-8.sub_metering_2: energy sub-metering No. 2 (in watt-hour of active energy). It corresponds to the laundry room, containing a washing-machine, a tumble-drier, a refrigerator and a light. 
-9.sub_metering_3: energy sub-metering No. 3 (in watt-hour of active energy). It corresponds to an electric water-heater and an air-conditioner.
+1.**date**: Date in format dd/mm/yyyy 
+
+2.**time**: time in format hh:mm:ss 
+
+3.**global_active_power**: household global minute-averaged active power (in kilowatt) 
+
+4.**global_reactive_power**: household global minute-averaged reactive power (in kilowatt) 
+
+5.**voltage**: minute-averaged voltage (in volt) 
+
+6.**global_intensity**: household global minute-averaged current intensity (in ampere) 
+
+7.**sub_metering_1**: energy sub-metering No. 1 (in watt-hour of active energy). It corresponds to the kitchen, containing mainly a dishwasher, an oven and a microwave (hot plates are not electric but gas powered). 
+
+8.**sub_metering_2**: energy sub-metering No. 2 (in watt-hour of active energy). It corresponds to the laundry room, containing a washing-machine, a tumble-drier, a refrigerator and a light. 
+
+9.**sub_metering_3**: energy sub-metering No. 3 (in watt-hour of active energy). It corresponds to an electric water-heater and an air-conditioner.
 
 
 ## Subsetting the data and pre-processing
@@ -26,6 +35,7 @@ Here, we choose only two days to get a sense of what the data is like. As you ca
 ## Importing and cleaning up the electric consumption data for Feb. 1 and Feb. 2, 2007.
 
 #Read data from rows 65000 to 70000, which encompass 2007-02-01 and 2007-02-02, no Headers
+setwd("/Users/polong/Dropbox/Coursera/DataScienceSpecialization/exdata-002")
 df <- read.table("household_power_consumption.txt", skip = 65000, nrows = 5000, header = FALSE, sep = ";")
 df <- df[df[,1] %in% c("1/2/2007","2/2/2007"),]
 
@@ -143,7 +153,7 @@ legend("topright", lty = 1, cex = 0.70, y.intersp = 0.9, col = c("black", "red",
 ###########
 
 #Export plots directly to plot4.png, script must end with dev.off()
-png(filename = "plot4.png", width = 480, height = 480)
+# png(filename = "plot4.png", width = 480, height = 480)
 
 #Two-by-two grid of plots
 par(mfrow =c(2,2))
